@@ -19,7 +19,8 @@ public class App
         valueA = 10;
         valueB = 20;
         System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.summe(10, 20));
-        
-        
+        System.out.println("Differenzen " + valueA + " - " + valueB + " = " + calculator.diff(10, 20));
+        System.out.println("Product " + valueA + " * " + valueB + " = " + calculator.product(10, 20));
+        System.out.println("Division " + valueA + " : " + valueB + " = " + calculator.quets(10, 20));
     }
 }
