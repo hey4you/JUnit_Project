@@ -13,4 +13,7 @@ public class Calculator {
 	public int quets(int quets1, int quets2){
 		return quets1 / quets2;
 	}
+	public void exceptionDivisonZero(){
+		System.out.println("There is a Divison by Zero");
+	}
 }
