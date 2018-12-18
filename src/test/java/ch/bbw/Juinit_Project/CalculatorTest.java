@@ -14,6 +14,12 @@ import junit.framework.TestCase;
 		assertTrue(testEE.summe(10, 15) == 25);
 	}
 	
+	@Test 
+	public void testSummeZweiNegativeIsOK(){
+		testEE = new Calculator();
+		assertTrue(testEE.summe(-3, -3) == -6);
+	}
+	
 	//Test für Differenz
 	@Test
 	public void testDiffZweiPositiveIsOk(){
