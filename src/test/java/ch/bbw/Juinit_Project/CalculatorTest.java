@@ -14,7 +14,7 @@ import junit.framework.TestCase;
 		assertTrue(testEE.summe(10, 15) == 25);
 	}
 	
-	@Test 
+/*  @Test 
 	public void testSummeZweiNegativeIsOK(){
 		testEE = new Calculator();
 		assertTrue(testEE.summe(-3, -3) == -6);
@@ -57,5 +57,5 @@ import junit.framework.TestCase;
 	public void testQuotientQuets1SmallerThanQuets2(){
 		testEE = new Calculator();
 		assertTrue(testEE.quets(10, 20) == 0.5);
-	}
+	}*/
 }
