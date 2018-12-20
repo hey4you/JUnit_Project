@@ -1,12 +1,7 @@
 package ch.bbw.Juinit_Project;
 
 public class Calculator {
-<<<<<<< HEAD
 	
-	public int summe(int summand1, int summand2){
-		return summand1 + summand2;
-	}
-=======
 	public int summe(int summand1, int summand2){
 		return summand1 + summand2;
 	}
@@ -22,5 +17,4 @@ public class Calculator {
 	public void exceptionDivisonZero(){
 		System.out.println("There is a Divison by Zero");
 	}
->>>>>>> cc1265dce93f8d7baa31d65676f5ebd892e58b3a
 }
