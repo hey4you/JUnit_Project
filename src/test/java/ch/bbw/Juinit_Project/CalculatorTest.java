@@ -14,7 +14,7 @@ public class CalculatorTest {
 		testEE = new Calculator();
 		assertTrue(testEE.summe(10, 15) == 25);
 	}
-	/*@Test
+	@Test
 	public void testSummeZweiNegativeIsOk() {
 		testEE = new Calculator();
 		assertTrue(testEE.summe(-7, -7) == -14);
@@ -57,19 +57,19 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void testSubtraktionZweiNegativeIsOk() {
+	public void testdiffZweiNegativeIsOk() {
 		testEE = new Calculator();
-		assertTrue(testEE.diff(-7, -6) == -1);
+		assertTrue(testEE.diff(-10, -9) == -1);
 	}
 
 	@Test
-	public void testSubtraktionPositivUndNegativeIsOk() {
+	public void testdiffPositivUndNegativeIsOk() {
 		testEE = new Calculator();
 		assertTrue(testEE.diff(10, -5) == 15);
 	}
 
 	@Test
-	public void testSubtraktionZeroIsOk() {
+	public void testdiffIS0ZeroIsOk() {
 		testEE = new Calculator();
 		assertTrue(testEE.diff(5, 5) == 0);
 	}
@@ -97,12 +97,17 @@ public class CalculatorTest {
 		testEE = new Calculator();
 		assertTrue(testEE.diff(Integer.MIN_VALUE, Integer.MAX_VALUE) == 1);
 	}
-
+	
+	@Test
+	public void testMultiplikation0Und0IsOk() {
+		testEE = new Calculator();
+		assertTrue(testEE.product(0, 0) == 0);
+	}
 
 	@Test
 	public void testMultiplikationZweiNegativeIsOk() {
 		testEE = new Calculator();
-		assertTrue(testEE.product(-30, -2) == 60);
+		assertTrue(testEE.product(-20, -2) == 40);
 	}
 
 	@Test
@@ -124,12 +129,6 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void testMultiplikation0Und0IsOk() {
-		testEE = new Calculator();
-		assertTrue(testEE.product(0, 0) == 0);
-	}
-
-	@Test
 	public void testMultiplikationMaxValueUnd1IsMinValueIsOk() {
 		testEE = new Calculator();
 		assertTrue(testEE.product(Integer.MAX_VALUE, -1) == -2147483647);
@@ -144,7 +143,7 @@ public class CalculatorTest {
 	@Test
 	public void testDivisionPositivUndNegativeIsOk() {
 		testEE = new Calculator();
-		assertTrue(testEE.quets(-45, 9) == -5);
+		assertTrue(testEE.quets(-50, 10) == -5);
 	}
 
 	@Test
@@ -154,22 +153,25 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void testDivision0DurchDividisorIsOk() {
+	public void testDivision0DurchQuetsIsOk() {
 
 		testEE = new Calculator();
-		assertTrue(testEE.quets(0, 5) == 0);
+		assertTrue(testEE.quets(0, 6) == 0);
 	}
-
-	@Test
-	public void testDivision0DurchIsOk() {
-		testEE = new Calculator();
-		//exceptionDivisonZero();
-	
+	//Schows exeption if devided by Zero
+	@Test(expected = java.lang.ArithmeticException.class)
+	public void divideBy0ExceptionExpected() {
+		testEE.diff(20, 0);
 	}
 
 	@Test
 	public void testDivisionMaxValueUnd1IsOk() {
 		testEE = new Calculator();
 		assertTrue(testEE.quets(Integer.MIN_VALUE, 1) == Integer.MIN_VALUE);
-	}*/
+	}
+	
+	@Test
+	public void divideBy0ExceptionUnexpected() throws ArithmeticException {
+		testEE.quets(35, 1);
+	}
 }
