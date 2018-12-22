@@ -1,3 +1,10 @@
 language: java
 sudo: false
 script: mvn install
+deploy:
+  provider: releases
+  api_key:
+    secure: lBYlBRG+sMCkMDDYgL/VsijplTRNOjTUpeS4hbz8rUl5Vrn/w10j3in2OVWetINmZZlEUapr1o9RufiTy6QnwFLrMA1mJayp5q3t7rzSGHUn8dCYp9h0KphNZCghI4F7obuoKL66hUGTbePlGjvtDbcHaakVueRa2IRSipBZTDkPjcOWRGSNFUnsTHORFl/eLRzfS+NlnCLAVdIvE9qDtBXNTLpkMxWqh4qgXG+zE2ubxfUKlaYj0caSgC6p0iXNKdMdCeTspdOJi9X287NjfRrSrFVqtesQu2JF0GJhJnBKN36qDPdMuDQFj3+t0H8+UvFwehg4FEsDW5TvfQEUmyJ8jp2FSN+8SBtOmQ0bho10rLDPiDaovUKZRj8q+JdwrkwEmYCQnjxUB4J4EZLfdbJhwQeuJ3PUlmwEit2zmdcfGEEsCEfglgulO/qVJOPcC9ncxl3E3NOvXYf2INWVSshjSDzXX1IufYyAazIpSzUGq4HaZOQXJ3bYqJ1mvlgu7U6FYKOuTtzU7xhmsuclyOG9PQ/WJevi6k90AdjlFLu/YC99snIcLhXipEMl4I9GRgZEHpitEbisSGwfDbtwmyswnX2rz0mLWxPqgF55fpz90bDk87bYZmn2Ljm7R12BI/U/f6Y1aAUZQzU6BoXXyHMoRjDWoH0Wa9GAv5UjvfU=
+  file: "/home/travis/.m2/repository/ch/bbw/Juinit_Project/0.0.1-SNAPSHOT/Juinit_Project-0.0.1-SNAPSHOT.jar"
+  on:
+    repo: hey4you/JUnit_Project
