@@ -2,8 +2,7 @@ package ch.bbw.Juinit_Project;
 
 import org.junit.Test;
 
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class CalculatorTest {
 	Calculator testEE;
@@ -159,10 +158,10 @@ public class CalculatorTest {
 		assertTrue(testEE.quets(0, 6) == 0);
 	}
 	//Schows exeption if devided by Zero
-	@Test(expected = java.lang.ArithmeticException.class)
-	public void divideBy0ExceptionExpected() {
-		testEE.diff(20, 0);
-	}
+	//@Test(expected = java.lang.ArithmeticException.class)
+	//public void divideBy0ExceptionExpected() {
+	//	testEE.diff(20, 0);
+	//}
 
 	@Test
 	public void testDivisionMaxValueUnd1IsOk() {
@@ -170,8 +169,8 @@ public class CalculatorTest {
 		assertTrue(testEE.quets(Integer.MIN_VALUE, 1) == Integer.MIN_VALUE);
 	}
 	
-	@Test
-	public void divideBy0ExceptionUnexpected() throws ArithmeticException {
-		testEE.quets(35, 1);
-	}
+	//@Test
+	//public void divideBy0ExceptionUnexpected() throws ArithmeticException {
+	//	testEE.quets(35, 1);
+	//}
 }
